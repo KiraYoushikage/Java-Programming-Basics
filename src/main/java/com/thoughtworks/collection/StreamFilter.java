@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class StreamFilter {
 
     public List<Integer> filterEven(List<Integer> numbers) {
-        return null;
+        return numbers.stream().filter((o)-> (o&1)==0).collect(Collectors.toList());
     }
 
     public List<String> filterEndWithS(List<String> words) {
