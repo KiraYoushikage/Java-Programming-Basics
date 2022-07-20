@@ -16,12 +16,11 @@ public class StreamSupplement {
     public double getAverage(List<Integer> numbers) {
         return numbers.stream()
                 .mapToDouble(Integer::doubleValue)
-                .average()
-                .getAsDouble();
+                .average().orElse(0);
     }
 
     public int getMaxValue(List<Integer> numbers) {
-        return numbers.stream().mapToInt(Integer::intValue).max().getAsInt();
+        return numbers.stream().mapToInt(Integer::intValue).max().orElse(0);
     }
 
 }

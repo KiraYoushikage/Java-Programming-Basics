@@ -19,6 +19,6 @@ public class StreamReduce {
     }
 
     public int getTotalLength(List<String> words) {
-        return 0;
+        return words.stream().mapToInt(String::length).sum();
     }
 }
