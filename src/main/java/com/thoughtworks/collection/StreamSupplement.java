@@ -21,7 +21,7 @@ public class StreamSupplement {
     }
 
     public int getMaxValue(List<Integer> numbers) {
-        return numbers.stream().;
+        return numbers.stream().mapToInt(Integer::intValue).max().getAsInt();
     }
 
 }
